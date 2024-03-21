@@ -1,21 +1,15 @@
-import MailchimpSubscribe from "react-mailchimp-subscribe";
-import { Newsletter } from "./Newsletter";
+import { Col } from "react-bootstrap";
 
-export const MailchimpForm = () => {
-  const postUrl = `${process.env.REACT_APP_MAILCHIMP_URL}?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
-
+export const ProjectCard = ({ title, description, imgUrl }) => {
   return (
-    <>
-      <MailchimpSubscribe
-        url={postUrl}
-        render={({ subscribe, status, message }) => (
-          <Newsletter
-            status={status}
-            message={message}
-            onValidated={formData => subscribe(formData)}
-            />
-        )}
-        />
-    </>
+    <Col size={12} sm={6} md={4}>
+      <div className="proj-imgbx">
+        <img src={imgUrl} />
+        <div className="proj-txtx">
+          <h4>{title}</h4>
+          <span>{description}</span>
+        </div>
+      </div>
+    </Col>
   )
 }
