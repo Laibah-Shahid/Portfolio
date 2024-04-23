@@ -20,7 +20,7 @@ export const Footer = () => {
             <a href="https://github.com/Laibah-Shahid" target="_blank"><img src={navIcon2} alt="" /></a>
             <a href="#" target="_blank"><img src={navIcon3} alt="" /></a>
             </div>
-            <p>Copyright 2024. All Rights Reserved</p>
+            <p>&copy; {new Date().getFullYear()} . All rights reserved.</p>
           </Col>
         </Row>
       </Container>
