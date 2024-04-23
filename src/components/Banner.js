@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import resume from "../assets/img/Laibah-Resume.pdf";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -47,6 +48,24 @@ export const Banner = () => {
     }
   }
 
+  function handleDownload() {
+    // Use the imported PDF file
+    const resumeUrl = resume;
+    
+    // Create an anchor element
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    
+    // Set the download attribute and trigger the click event
+    link.setAttribute('download', 'Laibah-Resume.pdf');
+    document.body.appendChild(link); // Append the link to the body
+    link.click();
+    document.body.removeChild(link); // Remove the link from the body after the download starts
+  }
+  
+  
+  
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -56,9 +75,10 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Judy`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h1>{`Hi! I'm Laibah`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>As a skilled web developer and designer, I specialize in creating captivating digital experiences through innovative design and robust development. With expertise in React and Next.js, I craft dynamic and interactive web applications. Leveraging diverse libraries and frameworks, I excel in building seamless, responsive websites that adapt flawlessly across devices. </p>
+                  <button onClick={handleDownload}><span>Download CV </span><ArrowRightCircle size={25} /></button>
+
               </div>}
             </TrackVisibility>
           </Col>
