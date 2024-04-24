@@ -6,6 +6,10 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
 export const Footer = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    alert("Twitter X is currently unavailable in Pakistan");
+  };
   return (
     <footer className="footer">
       <Container>
@@ -18,7 +22,7 @@ export const Footer = () => {
             <div className="social-icon">
             <a href="https://www.linkedin.com/in/laibah-shahid-275474265/" target="_blank"><img src={navIcon1} alt="" /></a>
             <a href="https://github.com/Laibah-Shahid" target="_blank"><img src={navIcon2} alt="" /></a>
-            <a href="#" target="_blank"><img src={navIcon3} alt="" /></a>
+            <a href="#" onClick={handleClick}><img src={navIcon3} alt="" /></a>
             </div>
             <p>&copy; {new Date().getFullYear()} . All rights reserved.</p>
           </Col>
