@@ -8,11 +8,9 @@ import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 import { SiNextdotjs, SiMongodb, SiExpress, SiMui, SiTailwindcss, SiTypescript, SiRedux} from "react-icons/si";
 import { DiNodejs,  DiJavascript } from "react-icons/di";
-import { FaSass, FaHtml5, FaBootstrap, FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaSass, FaHtml5, FaBootstrap, FaCss3Alt, FaReact, FaGithub  } from "react-icons/fa";
 import { TbBrandCpp } from "react-icons/tb";
-
-
-
+import { GrMysql } from "react-icons/gr";
 
 export const Skills = () => {
   const responsive = {
@@ -64,6 +62,10 @@ export const Skills = () => {
                                 <h5>MongoDB</h5>
                             </div>
                             <div className="item">
+                                <GrMysql className="skill-icon"/>
+                                <h5>MySqB</h5>
+                            </div>
+                            <div className="item">
                                 <SiExpress className="skill-icon"/>
                                 <h5>ExpressJS</h5>
                             </div>
@@ -86,6 +88,10 @@ export const Skills = () => {
                             <div className="item">
                                 <FaBootstrap className="skill-icon"/>
                                 <h5>BootStrap</h5>
+                            </div>
+                            <div className="item">
+                                <FaGithub className="skill-icon"/>
+                                <h5>Github</h5>
                             </div>
                             <div className="item">
                                 <DiJavascript className="skill-icon"/>
