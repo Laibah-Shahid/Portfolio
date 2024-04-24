@@ -63,7 +63,7 @@ export const Skills = () => {
                             </div>
                             <div className="item">
                                 <GrMysql className="skill-icon"/>
-                                <h5>MySqB</h5>
+                                <h5>MySql</h5>
                             </div>
                             <div className="item">
                                 <SiExpress className="skill-icon"/>
