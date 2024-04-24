@@ -32,6 +32,11 @@ export const NavBar = () => {
     setActiveLink(value);
   }
 
+  const handleClick = (event) => {
+    event.preventDefault();
+    alert("Twitter X is currently unavailable in Pakistan");
+  };
+
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
@@ -52,7 +57,7 @@ export const NavBar = () => {
               <div className="social-icon">
               <a href="https://www.linkedin.com/in/laibah-shahid-275474265/" target="_blank"><img src={navIcon1} alt="" /></a>
               <a href="https://github.com/Laibah-Shahid" target="_blank"><img src={navIcon2} alt="" /></a>
-              <a href="#" target="_blank"><img src={navIcon3} alt="" /></a>
+              <a href="#" onClick={handleClick}><img src={navIcon3} alt="" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
